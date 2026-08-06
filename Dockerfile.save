@@ -1,0 +1,10 @@
+FROM ubuntu:latest
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["bash"]
+FROM nginx:latest
+
+COPY index.html /usr/share/nginx/html/index.html
